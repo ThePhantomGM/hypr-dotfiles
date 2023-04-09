@@ -1,0 +1,195 @@
+* {{
+    border: none;
+    border-radius: 0;
+    font-family: Symbols Nerd Font Mono, NotoSansMono Nerd Font, monospace ;
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 0;
+}}
+
+window#waybar {{
+    background: rgba(21, 18, 27, 0);
+    color: {color6};
+}}
+
+tooltip {{
+    background: {background};
+    border-radius: 10px;
+    color: {color6};
+}}
+
+#workspaces button {{
+    padding: 5px;
+    color: #313244;
+    background: {background};
+    margin-right: 5px;
+}}
+
+#workspaces button.active {{
+    color: {color3};
+}}
+
+#workspaces button.focused {{
+    color: {color3};
+    background: #eba0ac;
+    border-radius: 10px;
+}}
+
+#workspaces button.urgent {{
+    color: #12111b;
+    background: #a6e3a1;
+    border-radius: 10px;
+}}
+
+#workspaces button:hover {{
+    background: #12111b;
+    color: {color3};
+    border-radius: 10px;
+}}
+
+#language,
+#custom-updates,
+#custom-caffeine,
+#custom-weather,
+#custom-launcher,
+#window,
+#clock,
+#cpu,
+#memory,
+#battery,
+#pulseaudio,
+#temperature,
+#network,
+#workspaces,
+#disk,
+#tray,
+#custom-powermenu,
+#backlight{{
+    background: {background};
+    padding: 0px 10px;
+    margin-top: 10px;
+    
+}}
+
+#tray {{
+    border-radius: 10px;
+    margin-right: 10px;
+}}
+
+#workspaces {{
+    background: {background};
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-right: 0px;
+    padding-left: 5px;
+}}
+
+#custom-caffeine {{
+    color: #89dceb;
+    border-radius: 10px 0px 0px 10px;
+    border-right: 0px;
+    margin-left: 10px;
+}}
+
+#language {{
+    color: {color6};
+    border-left: 0px;
+    border-right: 0px;
+    margin-right: 10px;
+    border-radius: 0px 10px 10px 0px;
+}}
+
+#custom-updates {{
+    color: {color6};
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 10px 0px 0px 10px;
+}}
+
+#temperature {{
+    color: {color6};
+    border-radius: 10px;
+    margin-right: 10px;
+}}
+
+#window {{
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+}}
+
+#clock {{
+    color: {color3};
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 10px;
+    border-right: 0px;
+}}
+
+#cpu {{
+    color: {color6};
+    border-left: 0px;
+    border-right: 0px;
+    margin-left: 10px;
+    border-radius: 10px 0px 0px 10px;
+}}
+
+#memory{{
+    color: {color6};
+    border-left: 0px;
+    border-right: 0px;
+}}
+
+#disk{{
+    color: {color6};
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px 10px 10px 0px;
+  }}
+
+#custom-launcher {{
+    color: {color3};
+    margin-left: 10px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 10px;
+}}
+
+#custom-powermenu {{
+    color: {color3};
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 10px;
+    margin-right: 10px;  
+}}
+
+#network {{
+    color: #f9e2af;
+    border-left: 0px;
+    border-right: 0px;
+}}
+
+#pulseaudio {{
+    color: {color3};
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 10px 0px 0px 10px;
+}}
+
+#pulseaudio.microphone {{
+    color: {color3};
+    margin-right: 5px;
+    border-radius: 0 10px 10px 0;
+}}
+
+#battery {{
+    color: #a6e3a1;
+    border-radius: 0 10px 10px 0;
+    margin-right: 10px;
+    border-left: 0px;
+}}
+
+#custom-weather {{
+    border-radius: 0px 10px 10px 0px;
+    border-right: 0px;
+    margin-left: 0px;
+}}

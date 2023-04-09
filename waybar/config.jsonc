@@ -1,0 +1,136 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passtrough": false,
+    "gtk-layer-shell": true,
+    "height": 0,
+    "modules-left": [
+        "custom/launcher",
+        "wlr/workspaces",
+        "clock",
+        "cpu",
+        "memory",
+        "disk"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "tray",
+        "temperature",
+        "custom/updates",
+        "hyprland/language",
+        "pulseaudio",
+        "pulseaudio#microphone",
+        "custom/powermenu"
+    ],
+
+    "hyprland/window": {
+        "format":"{}"
+        
+    },
+    "wlr/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "active": "",
+            "default": ""
+          }
+    },
+    "cpu": {
+        "interval": 5, 
+        "format": " {usage}%",
+        "on-click": ""
+    },
+    "memory": {
+        "interval": 5, 
+        "format": " {}%",
+        "format-alt":" {used:0.1f}G"
+    },
+    "disk": {
+        "interval": 5, 
+        "format": "󰒋 {free}",
+        "path": "/"
+    },
+    "custom/updates": {
+        "exec": "checkupdates | wc -l",
+        "interval": 30,  
+        "format": " {}",
+        "on-click": "kitty yay",
+        "tooltip": false
+    },
+    "temperature": {
+        "format": " {temperatureC}°C",
+        "hwmon-path": "/dev/cpu_temp", /* To get a stable hwmon-path follow this tutorial https://joonas.fi/2021/07/stable-device-path-for-linux-hwmon-interfaces/ */
+        "tooltip": false
+    },
+    "hyprland/language": {
+        "format": " {}",
+        "format-en": "us",
+        "format-ro": "ro",
+        "tooltip": false,
+        "on-click": "hyprctl switchxkblayout keychron-keychron-k6 next && hyprctl switchxkblayout keychron-k6 next", /* Replace with your own keyboard found from hyprctl devices, also add them as devices in your hyprland.conf */
+        "on-click-right": "pkill -34 wvkbd-mobintl"
+    },
+    "custom/launcher": {
+        "format": "" ,
+        "on-click": "rofi -show drun -theme ~/.config/rofi/launchers/type-2/style-2.rasi",
+        "tooltip": false
+    },
+    "custom/powermenu": {
+        "format": "",
+        "on-click": "bash ~/.config/rofi/scripts/powermenu_t2",
+        "tooltip": false
+    },
+       "tray": {
+        "icon-size": 13,
+        "tooltip": false,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{: %R       %d/%m}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": false,
+        "format-muted": " Muted",
+        "on-click": "pactl set-default-sink alsa_output.pci-0000_0a_00.4.analog-stereo",
+        "on-click-right": "pactl set-default-sink alsa_output.pci-0000_08_00.1.hdmi-stereo.monitor",
+        "on-click-middle": "pamixer -t",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "tooltip": false,
+        "format-source": " {volume}%",
+        "format-source-muted": " Muted",
+        "on-click-middle": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    }
+   
+}
